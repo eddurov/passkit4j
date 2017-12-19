@@ -146,7 +146,7 @@ public class PassSignerImpl implements PassSigner {
 		}
 	}
 
-	public byte[] generateSignature(byte[] data) throws PassSigningException {
+	public synchronized byte[] generateSignature(byte[] data) throws PassSigningException {
 		ensureBCProvider();
 
 		try {
